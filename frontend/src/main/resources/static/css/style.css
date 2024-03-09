@@ -1,0 +1,60 @@
+body {
+    padding: 20px;
+}
+
+h4 {
+    color: #007bff;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.edit-link, .delete-link {
+    display: inline-block;
+    margin-right: 10px;
+    color: #007bff;
+}
+
+#add-link {
+    display: block;
+    margin-top: 10px;
+    color: #28a745;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#submit-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: #218838;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+}

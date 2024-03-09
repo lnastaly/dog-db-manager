@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{common/general :: header}"></head>
+<body>
+    <div th:replace="~{common/general :: banner}"></div>
+    <p class="alert alert-danger">No dogs were found!</p>
+    <a id="add-link" th:href="@{'/addDog'}">Add a Dog</a>
+</body>
+</html>

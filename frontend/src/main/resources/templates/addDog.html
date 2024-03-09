@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{common/general :: header}"></head>
+<body>
+    <div th:replace="~{common/general :: banner}"></div>
+    <p class="alert alert-danger" th:if="${errorMessage}" th:text="${errorMessage}"></p>
+    <h4>Add Dog:</h4>
+    <form action="#" th:object="${dog}" th:action="@{/addDog}" method="post">
+        <label>Name</label>
+        <input th:field="*{name}" type="text" name="name" required>
+        <label>Age</label>
+        <input th:field="*{age}" type="number" name="age" required>
+        <input id="submit-button" type="submit" value="Add">
+    </form>
+    <a id="back-button" th:href="@{'/dogs'}">Go back</a>
+</body>
+</html>

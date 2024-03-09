@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{common/general :: header}"></head>
+<body>
+    <div th:replace="~{common/general :: banner}"></div>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            <tr th:each="dog : ${dogs}">
+                <td th:text="${dog.id}"></td>
+                <td th:text="${dog.name}"></td>
+                <td th:text="${dog.age}"></td>
+                <td>
+                    <a th:id="edit-link-+${dog.id}" class="edit-link" th:href="@{'/editDog/' + ${dog.id}}">Edit</a>
+                    <a th:id="delete-link-+${dog.id}" class="delete-link" th:href="@{'/deleteDog/' + ${dog.id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a id="add-link" th:href="@{'/addDog'}">Add Dog</a>
+</body>
+</html>
